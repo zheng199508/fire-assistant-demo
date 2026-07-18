@@ -1,4 +1,4 @@
-const CACHE_VERSION = "fire-assistant-v5-word-export";
+const CACHE_VERSION = "fire-assistant-v6-install-help";
 const SHELL = [
   "./",
   "./index.html",

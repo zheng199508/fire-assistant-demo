@@ -21,7 +21,7 @@
     </a>
     <div class="topbar-actions">
       <span id="networkStatus" class="status-pill" aria-live="polite">检测网络…</span>
-      <button id="installButton" class="button ghost compact" type="button" hidden>安装应用</button>
+      <button id="installButton" class="button ghost compact" type="button">安装到手机</button>
       <button id="importProjectButton" class="button ghost compact" type="button">导入</button>
       <button id="newProjectButton" class="button ghost compact" type="button">新建</button>
     </div>
@@ -190,6 +190,19 @@
   </main>
 
   <input id="importProjectInput" type="file" accept="application/json" hidden>
+  <dialog id="installHelp" class="install-help" aria-labelledby="installHelpTitle">
+    <div class="install-help-heading">
+      <div><p class="eyebrow">添加到桌面</p><h2 id="installHelpTitle">把消防助手装到手机</h2></div>
+      <button id="closeInstallHelp" class="dialog-close" type="button" aria-label="关闭">×</button>
+    </div>
+    <ol>
+      <li><strong>vivo 等手机自带浏览器</strong><span>点击浏览器底部或右上角菜单，选择“添加到桌面 / 添加到主屏幕”。若没有该项，可先收藏本页，再在收藏列表长按本页并选择“添加至桌面”。</span></li>
+      <li><strong>Android Chrome / Edge</strong><span>打开浏览器菜单，选择“安装应用”或“添加到主屏幕”。</span></li>
+      <li><strong>iPhone Safari</strong><span>点击“分享”，向下找到“添加到主屏幕”，然后点击“添加”。</span></li>
+    </ol>
+    <p class="install-help-note">首次请等到页面显示“专业内核已就绪”后再添加。安装后可先开一次飞行模式测试离线运行。</p>
+    <button id="confirmInstallHelp" class="button primary" type="button">我知道了</button>
+  </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
   <footer><span>消防方案助手 · 零成本本地审核版</span><span>规则结论需逐条专业复核</span></footer>

@@ -597,10 +597,19 @@ window.addEventListener("online", updateNetworkStatus);
 window.addEventListener("offline", updateNetworkStatus);
 
 const installButton = document.querySelector("#installButton");
+const installHelp = document.querySelector("#installHelp");
+function openInstallHelp() {
+  if (typeof installHelp.showModal === "function") {
+    installHelp.showModal();
+  } else {
+    window.alert("请打开浏览器菜单，选择“添加到桌面 / 添加到主屏幕”。vivo 浏览器也可先收藏本页，再在收藏列表长按并选择“添加至桌面”。");
+  }
+}
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
   deferredInstallPrompt = event;
   installButton.hidden = false;
+  installButton.textContent = "安装应用";
 });
 installButton.addEventListener("click", async () => {
   if (deferredInstallPrompt) {
@@ -609,10 +618,18 @@ installButton.addEventListener("click", async () => {
     deferredInstallPrompt = null;
     installButton.hidden = true;
   } else {
-    showToast("如未出现安装提示，请使用浏览器菜单中的“添加到主屏幕/安装应用”");
+    openInstallHelp();
   }
 });
+document.querySelector("#closeInstallHelp").addEventListener("click", () => installHelp.close());
+document.querySelector("#confirmInstallHelp").addEventListener("click", () => installHelp.close());
+installHelp.addEventListener("click", (event) => {
+  if (event.target === installHelp) installHelp.close();
+});
 window.addEventListener("appinstalled", () => { installButton.hidden = true; });
+if (window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone) {
+  installButton.hidden = true;
+}
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch((error) => console.warn("Service worker registration failed", error)));

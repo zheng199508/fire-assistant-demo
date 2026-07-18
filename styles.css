@@ -304,6 +304,18 @@ fieldset { margin: 0; padding: 0; border: 0; }
 .report-content p { margin: 8px 0; }
 
 .toast { position: fixed; z-index: 80; right: 20px; bottom: 20px; max-width: 340px; padding: 13px 16px; color: #fff; border-radius: 12px; background: var(--deep); box-shadow: 0 15px 40px rgba(0,0,0,.18); font-size: 11px; }
+.install-help { width: min(560px, calc(100% - 28px)); padding: 0; color: var(--ink); border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 24px 80px rgba(12,39,42,.24); }
+.install-help::backdrop { background: rgba(9,28,30,.58); backdrop-filter: blur(3px); }
+.install-help-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 24px 26px 18px; color: #fff; background: var(--deep); }
+.install-help-heading h2 { margin: 3px 0 0; font-size: 21px; }
+.dialog-close { width: 34px; height: 34px; color: #fff; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; background: transparent; font-size: 24px; line-height: 1; cursor: pointer; }
+.install-help ol { display: grid; gap: 0; margin: 0; padding: 8px 26px 0 48px; }
+.install-help li { padding: 15px 0 15px 5px; border-bottom: 1px solid var(--line); }
+.install-help li strong, .install-help li span { display: block; }
+.install-help li strong { margin-bottom: 5px; font-size: 13px; }
+.install-help li span { color: var(--muted); font-size: 11px; line-height: 1.7; }
+.install-help-note { margin: 16px 26px; padding: 12px 14px; color: #6c552b; border-radius: 10px; background: var(--warning-soft); font-size: 11px; line-height: 1.65; }
+.install-help > .button { width: calc(100% - 52px); margin: 0 26px 24px; }
 footer { display: flex; justify-content: space-between; gap: 20px; padding: 20px clamp(16px,4vw,54px); color: #7b898a; font-size: 10px; }
 
 @media (max-width: 900px) {
@@ -324,6 +336,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 20px
   .topbar { min-height: 64px; padding: 9px 13px; }
   .brand img { width: 38px; height: 38px; }
   .brand small, .status-pill, #importProjectButton, #newProjectButton { display: none; }
+  #installButton { padding-inline: 12px; white-space: nowrap; }
   .workspace { gap: 14px; padding: 14px 10px 28px; }
   .engine-banner { margin: 0 2px; }
   #assessmentForm, .results { border-radius: 20px; }
@@ -344,6 +357,10 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 20px
   .conclusion-card { grid-template-columns: auto 1fr; }
   .conclusion-card > small { display: none; }
   footer { flex-direction: column; text-align: center; }
+  .install-help-heading { padding: 20px 20px 16px; }
+  .install-help ol { padding: 7px 20px 0 40px; }
+  .install-help-note { margin-inline: 20px; }
+  .install-help > .button { width: calc(100% - 40px); margin-inline: 20px; }
 }
 
 @media print {
