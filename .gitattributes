@@ -1,0 +1,2 @@
+# Runtime hashes are calculated over exact bytes; never normalize line endings.
+* -text
