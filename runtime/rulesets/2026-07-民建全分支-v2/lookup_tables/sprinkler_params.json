@@ -1,0 +1,30 @@
+{
+  "table": "sprinkler_params",
+  "description": "自动喷水灭火系统设计参数（依据 GB 50084-2017 第5章）",
+  "民用建筑": {
+    "轻危险级": {"spray_density": "4 L/(min·m²)", "coverage_area": "160 m²", "sprinkler_type": "标准响应/快速响应喷头（下垂型/直立型）", "k_factor": "K=80", "max_spacing": "4.6m", "max_protect_area": "20 m²/只"},
+    "中危险级I级": {"spray_density": "6 L/(min·m²)", "coverage_area": "160 m²", "sprinkler_type": "标准响应/快速响应喷头", "k_factor": "K=80", "max_spacing": "4.0m", "max_protect_area": "12.5 m²/只"},
+    "中危险级II级": {"spray_density": "8 L/(min·m²)", "coverage_area": "160 m²", "sprinkler_type": "快速响应喷头（推荐）", "k_factor": "K=80", "max_spacing": "3.4m", "max_protect_area": "11.5 m²/只"},
+    "严重危险级I级": {"spray_density": "12 L/(min·m²)", "coverage_area": "260 m²", "sprinkler_type": "快速响应/标准响应喷头", "k_factor": "K=115", "max_spacing": "3.0m", "max_protect_area": "9.0 m²/只"},
+    "严重危险级II级": {"spray_density": "16 L/(min·m²)", "coverage_area": "260 m²", "sprinkler_type": "快速响应/标准响应喷头", "k_factor": "K=115", "max_spacing": "3.0m", "max_protect_area": "9.0 m²/只"}
+  },
+  "工业建筑-厂房": {
+    "轻危险级": {"spray_density": "4 L/(min·m²)", "coverage_area": "160 m²", "sprinkler_type": "标准响应喷头", "k_factor": "K=80", "max_spacing": "4.6m"},
+    "中危险级I级": {"spray_density": "6 L/(min·m²)", "coverage_area": "160 m²", "sprinkler_type": "标准响应喷头", "k_factor": "K=80", "max_spacing": "4.0m"},
+    "中危险级II级": {"spray_density": "8 L/(min·m²)", "coverage_area": "160 m²", "sprinkler_type": "标准/快速响应喷头", "k_factor": "K=80", "max_spacing": "3.4m"},
+    "严重危险级I级": {"spray_density": "12 L/(min·m²)", "coverage_area": "260 m²", "sprinkler_type": "K=115", "k_factor": "K=115", "max_spacing": "3.0m"},
+    "严重危险级II级": {"spray_density": "16 L/(min·m²)", "coverage_area": "260 m²", "sprinkler_type": "K=115", "k_factor": "K=115", "max_spacing": "3.0m"}
+  },
+  "仓库": {
+    "仓库危险级I级": {"spray_density": "见GB 50084表5.0.4-1", "coverage_area": "根据堆垛高度确定", "sprinkler_type": "标准覆盖面积喷头", "k_factor": "K=115/161", "max_spacing": "3.0m", "stack_detail": {"堆垛高度≤3.5m": "喷水强度 6 L/(min·m²) 作用面积 160m²", "堆垛高度3.5-6.0m": "喷水强度 8 L/(min·m²) 作用面积 200m²", "堆垛高度6.0-7.5m": "喷水强度 12 L/(min·m²) 作用面积 260m²"}},
+    "仓库危险级II级": {"spray_density": "见GB 50084表5.0.4-2", "coverage_area": "根据堆垛高度确定", "sprinkler_type": "ESFR喷头/大流量喷头", "k_factor": "K=161/202/242/363", "max_spacing": "3.0m", "stack_detail": {"堆垛高度≤3.5m": "喷水强度 8 L/(min·m²) 作用面积 200m²", "堆垛高度3.5-6.0m": "喷水强度 12 L/(min·m²) 作用面积 260m²", "堆垛高度6.0-7.5m": "喷水强度 16 L/(min·m²) 作用面积 300m²", "堆垛高度>7.5m": "ESFR喷头或特殊应用喷头，K≥202"}},
+    "仓库危险级III级": {"spray_density": "见GB 50084表5.0.4-3", "coverage_area": "根据堆垛高度确定", "sprinkler_type": "ESFR喷头/特殊应用喷头", "k_factor": "K=161/242/363", "max_spacing": "3.0m", "stack_detail": {"堆垛高度≤3.5m": "喷水强度 12 L/(min·m²) 作用面积 260m²", "堆垛高度3.5-6.0m": "喷水强度 16 L/(min·m²) 作用面积 300m²", "堆垛高度>6.0m": "ESFR喷头或特殊应用喷头，K≥202"}}
+  },
+  "汽车库": {"spray_density": "8 L/(min·m²)", "coverage_area": "160 m²", "sprinkler_type": "快速响应喷头（直立型/下垂型）", "k_factor": "K=80", "max_spacing": "3.4m", "notes": "停车位上方或侧上方布置；机械车库按载车板分层设喷头，喷头上方设集热板"},
+  "高大空间": {
+    "民用_净高8-12m": {"spray_density": "见GB 50084第5.0.2条", "sprinkler_type": "特殊响应喷头（K≥115）", "k_factor": "K=115/161"},
+    "民用_净高12-18m": {"spray_density": "见GB 50084第5.0.2条", "sprinkler_type": "非仓库型特殊应用喷头", "k_factor": "K=161/242"},
+    "仓库_净高>12m": {"note": "净空高度超过闭式系统应用范围，应采用雨淋系统或固定消防炮/自动跟踪定位射流灭火系统", "citation": "GB 50084-2017 第5.0.2/5.0.3条"},
+    "民用_净高>18m": {"note": "净空高度超过闭式系统应用范围，应采用雨淋系统或固定消防炮/自动跟踪定位射流灭火系统", "citation": "GB 50084-2017 第5.0.2条"}
+  }
+}

@@ -1,0 +1,531 @@
+{
+  "scope": "civil.public",
+  "description": "公共建筑规则",
+  "rules": [
+    {
+      "id": "CP-0025",
+      "scope": "civil.public",
+      "condition": "公建 && H > 50m",
+      "conclusion": "一类高层公共建筑",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表5.1.1",
+      "priority": 100,
+      "tags": [
+        "civil",
+        "public"
+      ]
+    },
+    {
+      "id": "CP-0026",
+      "scope": "civil.public",
+      "condition": "公建 && H > 24m && 满足一类高层公建条件（医疗/重要公建/老年人照料设施/省级广电防灾/藏书>100万册/任一层S>1000㎡商店展览等）",
+      "conclusion": "一类高层公共建筑",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表5.1.1",
+      "priority": 100,
+      "tags": [
+        "civil",
+        "public",
+        "一类高层公建",
+        "老年人",
+        "医疗",
+        "商店展览"
+      ]
+    },
+    {
+      "id": "CP-0027",
+      "scope": "civil.public",
+      "condition": "公建 && H > 24m && 非一类高层条件",
+      "conclusion": "二类高层公共建筑",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表5.1.1",
+      "priority": 100,
+      "tags": [
+        "civil",
+        "public",
+        "二类高层公建"
+      ]
+    },
+    {
+      "id": "CP-0028",
+      "scope": "civil.public",
+      "condition": "公建 && H <= 24m",
+      "conclusion": "单、多层公共建筑",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表5.1.1",
+      "priority": 100,
+      "tags": [
+        "civil",
+        "public"
+      ]
+    },
+    {
+      "id": "CP-0029",
+      "scope": "civil.public",
+      "condition": "一类高层公共建筑",
+      "conclusion": "耐火等级不应低于一级",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.1.3-1条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "一类高层公建"
+      ]
+    },
+    {
+      "id": "CP-0030",
+      "scope": "civil.public",
+      "condition": "一类高层公建",
+      "conclusion": "疏散楼梯应为防烟楼梯间",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.12条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "public",
+        "一类高层公建"
+      ]
+    },
+    {
+      "id": "CP-0031",
+      "scope": "civil.public",
+      "condition": "一类高层公共建筑",
+      "conclusion": "应设置消防电梯",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第7.3.1-2条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "public",
+        "一类高层公建"
+      ]
+    },
+    {
+      "id": "CP-0032",
+      "scope": "civil.public",
+      "condition": "老年人照料设施（独立建造，一二级耐火）",
+      "conclusion": "H不应大于54m（不宜大于32m）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.3.1A条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "老年人"
+      ]
+    },
+    {
+      "id": "CP-0033",
+      "scope": "civil.public",
+      "condition": "老年人照料设施 && H > 24m",
+      "conclusion": "室内疏散楼梯应为防烟楼梯间",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.13A条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "老年人"
+      ]
+    },
+    {
+      "id": "CP-0034",
+      "scope": "civil.public",
+      "condition": "医院和疗养院住院部分",
+      "conclusion": "医院和疗养院的住院部分不应设置在地下或半地下",
+      "conclusion_type": "prohibited",
+      "citation": "GB 50016-2014 第5.4.5条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "医疗",
+        "住院"
+      ]
+    },
+    {
+      "id": "CP-0043",
+      "scope": "civil.public",
+      "condition": "医疗建筑",
+      "conclusion": "医院病房楼疏散走道净宽度不应小于1.4m",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.18条",
+      "priority": 85,
+      "tags": [
+        "civil",
+        "public",
+        "医疗"
+      ],
+      "design_params": {
+        "走道净宽度": "≥ 1.40m（单面布房）或 ≥ 1.50m（双面布房）",
+        "疏散门净宽度": "≥ 0.90m",
+        "首层疏散外门": "≥ 1.30m"
+      }
+    },
+    {
+      "id": "CP-0044",
+      "scope": "civil.public",
+      "condition": "医疗建筑",
+      "conclusion": "医疗建筑室内消火栓箱内应配置消防软管卷盘",
+      "conclusion_type": "required",
+      "citation": "GB 50974-2014 第7.4.2条",
+      "priority": 80,
+      "tags": [
+        "civil",
+        "public",
+        "医疗"
+      ],
+      "design_params": {
+        "消防软管卷盘": "DN25，长度30m，喷嘴直径 ≥ 6mm"
+      }
+    },
+    {
+      "id": "CP-0035",
+      "scope": "civil.public",
+      "condition": "歌舞娱乐放映游艺场所",
+      "conclusion": "不应布置在地下二层及以下楼层",
+      "conclusion_type": "prohibited",
+      "citation": "GB 50016-2014 第5.4.9条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "public",
+        "歌舞娱乐"
+      ]
+    },
+    {
+      "id": "CP-0036",
+      "scope": "civil.public",
+      "condition": "民用建筑内经营/存放/使用甲、乙类火灾危险性物品",
+      "conclusion": "严禁附设在民用建筑内",
+      "conclusion_type": "prohibited",
+      "citation": "GB 50016-2014 第5.4.2条",
+      "priority": 100,
+      "tags": [
+        "civil",
+        "public",
+        "甲",
+        "乙"
+      ]
+    },
+    {
+      "id": "CP-0037",
+      "scope": "civil.public",
+      "condition": "公共建筑 && H > 100m",
+      "conclusion": "应设置避难层(间)",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.23条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public"
+      ]
+    },
+    {
+      "id": "CP-0038",
+      "scope": "civil.public",
+      "condition": "一类高层公建（除游泳池/溜冰场外）及其地下/半地下室",
+      "conclusion": "应设置自动灭火系统（宜自喷）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.3-1条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "一类高层公建"
+      ]
+    },
+    {
+      "id": "CP-0039",
+      "scope": "civil.public",
+      "condition": "其他一类高层公共建筑",
+      "conclusion": "应设置火灾自动报警系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.1-12条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "一类高层公建"
+      ]
+    },
+    {
+      "id": "CP-0040",
+      "scope": "civil.public",
+      "condition": "歌舞娱乐放映游艺场所",
+      "conclusion": "应设置火灾自动报警系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.1-8条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "歌舞娱乐"
+      ]
+    },
+    {
+      "id": "CP-0041",
+      "scope": "civil.public",
+      "condition": "老年人照料设施",
+      "conclusion": "应设置自动灭火系统（宜自喷）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.4-5条",
+      "priority": 85,
+      "tags": [
+        "civil",
+        "public",
+        "老年人"
+      ]
+    },
+    {
+      "id": "CP-0041-a",
+      "scope": "civil.public",
+      "condition": "大/中型幼儿园",
+      "conclusion": "应设置自动灭火系统（宜自喷）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.4-5条",
+      "priority": 85,
+      "tags": [
+        "civil",
+        "public",
+        "教育"
+      ]
+    },
+    {
+      "id": "CP-0042",
+      "scope": "civil.public",
+      "condition": "二类高层公建 && H > 32m",
+      "conclusion": "疏散楼梯应为防烟楼梯间 + 应设消防电梯",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.12条/第7.3.1-2条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "public",
+        "二类高层公建"
+      ]
+    },
+    {
+      "id": "CP-0045",
+      "scope": "civil.public",
+      "condition": "幼儿园/托儿所 && 所在楼层为四层及以上",
+      "conclusion": "幼儿园/托儿所不应设置在四层及以上楼层",
+      "conclusion_type": "prohibited",
+      "citation": "GB 50016-2014 第5.4.4条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "教育",
+        "幼儿园"
+      ],
+      "design_params": {
+        "层数限制": "不应超过3层",
+        "安全出口": "不少于2个"
+      }
+    },
+    {
+      "id": "CP-0045a",
+      "scope": "civil.public",
+      "condition": "幼儿园/托儿所 && 所在楼层为首层~三层",
+      "conclusion": "幼儿园/托儿所设置楼层满足规范要求（首层~三层）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.4.4条",
+      "priority": 85,
+      "tags": [
+        "civil",
+        "public",
+        "教育",
+        "幼儿园"
+      ]
+    },
+    {
+      "id": "CP-0046",
+      "scope": "civil.public",
+      "condition": "寄宿制学校",
+      "conclusion": "寄宿制学校宿舍应设置火灾自动报警系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.1-3条",
+      "priority": 85,
+      "tags": [
+        "civil",
+        "public",
+        "教育",
+        "寄宿制学校"
+      ]
+    },
+    {
+      "id": "CP-0047",
+      "scope": "civil.public",
+      "condition": "老年人照料设施 && H > 24m",
+      "conclusion": "建筑高度不应大于54m（不宜大于32m）",
+      "conclusion_type": "prohibited",
+      "citation": "GB 50016-2014 第5.3.1A条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "public",
+        "老年人"
+      ]
+    },
+    {
+      "id": "CP-0048",
+      "scope": "civil.public",
+      "condition": "老年人照料设施",
+      "conclusion": "应设置火灾自动报警系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.1-7条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "老年人"
+      ],
+      "design_params": {
+        "报警装置": "每个房间和公共活动用房均应设置",
+        "呼叫装置": "老年人居室应设呼救按钮"
+      }
+    },
+    {
+      "id": "CP-0049",
+      "scope": "civil.public",
+      "condition": "餐饮场所",
+      "conclusion": "餐饮场所应设置排油烟管道并设防火阀",
+      "conclusion_type": "recommended",
+      "citation": "GB 50016-2014 第6.3.5条",
+      "priority": 75,
+      "tags": [
+        "civil",
+        "public",
+        "餐饮"
+      ],
+      "design_params": {
+        "防火阀": "150℃防火阀",
+        "油烟管道": "定期清洗，每季度不少于1次"
+      }
+    },
+    {
+      "id": "CP-0050",
+      "scope": "civil.public",
+      "condition": "电影院/剧场",
+      "conclusion": "电影院/剧场应设独立疏散楼梯",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.4.7条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "电影院"
+      ],
+      "design_params": {
+        "疏散楼梯": "不少于2个独立疏散楼梯",
+        "观众厅疏散门": "不少于2个，净宽 ≥ 1.40m"
+      }
+    },
+    {
+      "id": "CP-0051",
+      "scope": "civil.public",
+      "condition": "锅炉房",
+      "conclusion": "锅炉房宜独立建造，不应贴邻人员密集场所",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.4.12条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "锅炉房"
+      ],
+      "design_params": {
+        "独立建造": "确需贴邻时采用防火墙分隔",
+        "地下锅炉房": "不应设在人员密集场所的下一层"
+      }
+    },
+    {
+      "id": "CP-0052",
+      "scope": "civil.public",
+      "condition": "锅炉房所在位置为地下",
+      "conclusion": "地下锅炉房不应设在人员密集场所的下一层，应采用防火墙分隔",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.4.12条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "锅炉房"
+      ],
+      "design_params": {
+        "耐火等级": "不低于二级",
+        "疏散门": "直通室外或安全出口"
+      }
+    },
+    {
+      "id": "CP-0053",
+      "scope": "civil.public",
+      "condition": "发电机房",
+      "conclusion": "发电机房不应布置在人员密集场所的上一层、下一层或贴邻",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.4.13条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "发电机房"
+      ],
+      "design_params": {
+        "耐火等级": "不低于二级",
+        "储油间": "总储量≤1m³，3.00h防火墙+甲级防火门分隔"
+      }
+    },
+    {
+      "id": "CP-0054",
+      "scope": "civil.public",
+      "condition": "消防控制室",
+      "conclusion": "消防控制室应设置在首层或地下一层靠外墙部位",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.1.7条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "消防控制室"
+      ],
+      "design_params": {
+        "疏散门": "直通室外或安全出口",
+        "防水淹": "门口设挡水设施"
+      }
+    },
+    {
+      "id": "CP-0055",
+      "scope": "civil.public",
+      "condition": "消防控制室所在位置为非首层/地下一层靠外墙",
+      "conclusion": "消防控制室宜调整至首层或地下一层靠外墙部位（GB 50016 第8.1.7条）",
+      "conclusion_type": "recommended",
+      "citation": "GB 50016-2014 第8.1.7条",
+      "priority": 80,
+      "tags": [
+        "civil",
+        "public",
+        "消防控制室"
+      ]
+    },
+    {
+      "id": "CP-0056",
+      "scope": "civil.public",
+      "condition": "消防水泵房",
+      "conclusion": "消防水泵房不应设置在地下三层及以下，室内地面与室外出入口地坪高差不应大于10m",
+      "conclusion_type": "required",
+      "citation": "GB 50974-2014 第5.5.12条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "public",
+        "消防水泵房"
+      ],
+      "design_params": {
+        "疏散门": "直通室外或安全出口",
+        "防水淹": "门口设挡水设施，IPX5防水"
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "scope": "garage",
+  "description": "汽车库规则",
+  "rules": [
+    {
+      "id": "GA-0068",
+      "scope": "garage",
+      "condition": "停车数>300 || S>10000㎡",
+      "conclusion": "Ⅰ类汽车库",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 表3.0.1",
+      "priority": 100,
+      "tags": [
+        "garage"
+      ]
+    },
+    {
+      "id": "GA-0069",
+      "scope": "garage",
+      "condition": "停车数151~300 || 5000<S<=10000",
+      "conclusion": "Ⅱ类汽车库",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 表3.0.1",
+      "priority": 100,
+      "tags": [
+        "garage"
+      ]
+    },
+    {
+      "id": "GA-0070",
+      "scope": "garage",
+      "condition": "停车数51~150 || 2000<S<=5000",
+      "conclusion": "Ⅲ类汽车库",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 表3.0.1",
+      "priority": 100,
+      "tags": [
+        "garage"
+      ]
+    },
+    {
+      "id": "GA-0071",
+      "scope": "garage",
+      "condition": "停车数<=50 && S<=2000",
+      "conclusion": "Ⅳ类汽车库",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 表3.0.1",
+      "priority": 100,
+      "tags": [
+        "garage"
+      ]
+    },
+    {
+      "id": "GA-0072",
+      "scope": "garage",
+      "condition": "地下/半地下/高层汽车库",
+      "conclusion": "耐火等级应为一级",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第3.0.3-1条",
+      "priority": 90,
+      "tags": [
+        "garage",
+        "地下室"
+      ]
+    },
+    {
+      "id": "GA-0073",
+      "scope": "garage",
+      "condition": "地下/高层汽车库+一二级",
+      "conclusion": "防火分区<=2000㎡",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 表5.1.1",
+      "priority": 85,
+      "tags": [
+        "garage",
+        "地下室"
+      ]
+    },
+    {
+      "id": "GA-0074",
+      "scope": "garage",
+      "condition": "设自动灭火系统",
+      "conclusion": "防火分区面积增加1.0倍",
+      "conclusion_type": "conditional",
+      "citation": "GB 50067-2014 第5.1.2条",
+      "priority": 80,
+      "tags": [
+        "garage"
+      ]
+    },
+    {
+      "id": "GA-0075",
+      "scope": "garage",
+      "condition": "汽车库与其他建筑合建",
+      "conclusion": "防火墙+>=2.00h不燃性楼板分隔",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第5.1.6-2条",
+      "priority": 90,
+      "tags": [
+        "garage"
+      ]
+    },
+    {
+      "id": "GA-0076",
+      "scope": "garage",
+      "condition": "室内任一点到最近人员安全出口",
+      "conclusion": "疏散距离<=45m（设自喷<=60m）",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第6.0.6条",
+      "priority": 90,
+      "tags": [
+        "garage"
+      ]
+    },
+    {
+      "id": "GA-0077",
+      "scope": "garage",
+      "condition": "停车数>10辆地下/半地下汽车库",
+      "conclusion": "应设置自动喷水灭火系统",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第7.2.1-2条",
+      "priority": 90,
+      "tags": [
+        "garage",
+        "地下室"
+      ]
+    },
+    {
+      "id": "GA-0078",
+      "scope": "garage",
+      "condition": "Ⅰ类汽车库/修车库 || Ⅱ类地下/半地下/高层汽车库 || 机械式汽车库",
+      "conclusion": "应设置火灾自动报警系统",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第9.0.7条",
+      "priority": 90,
+      "tags": [
+        "garage",
+        "地下室"
+      ]
+    },
+    {
+      "id": "GA-0079",
+      "scope": "garage",
+      "condition": "H>32m汽车库",
+      "conclusion": "应设消防电梯",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第6.0.4条",
+      "priority": 90,
+      "tags": [
+        "garage"
+      ]
+    },
+    {
+      "id": "GA-0080",
+      "scope": "garage",
+      "condition": "除敞开式+S<1000㎡地下一层车库外",
+      "conclusion": "应设排烟系统+划分防烟分区（<=2000㎡）",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第8.2.1条",
+      "priority": 85,
+      "tags": [
+        "garage",
+        "地下室"
+      ]
+    },
+    {
+      "id": "GA-0081",
+      "scope": "garage",
+      "condition": "Ⅰ/Ⅱ/Ⅲ类汽车库+Ⅰ/Ⅱ类修车库",
+      "conclusion": "室内消火栓用水量>=10L/s",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第7.1.8-1条",
+      "priority": 85,
+      "tags": [
+        "garage"
+      ]
+    }
+  ]
+}

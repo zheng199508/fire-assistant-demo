@@ -1,0 +1,38 @@
+{
+  "table": "indoor_hydrant_flow",
+  "description": "室内消火栓设计流量（L/s）（依据 GB 50974-2014 表3.5.2）",
+  "civil": {
+    "住宅_H>54m": {"flow_Ls": 20, "guns": 4, "duration_h": 2.0},
+    "住宅_27m<H≤54m": {"flow_Ls": 15, "guns": 3, "duration_h": 2.0},
+    "住宅_H≤27m": {"flow_Ls": 10, "guns": 2, "duration_h": 2.0},
+    "公建_H>50m_large": {"flow_Ls": 40, "guns": 8, "duration_h": 3.0},
+    "公建_H>50m_medium": {"flow_Ls": 30, "guns": 6, "duration_h": 2.0},
+    "公建_24m<H≤50m": {"flow_Ls": 20, "guns": 4, "duration_h": 2.0},
+    "公建_H≤24m": {"flow_Ls": 15, "guns": 3, "duration_h": 2.0},
+    "citation": "GB 50974-2014 表3.5.2"
+  },
+  "industrial_workshop": {
+    "甲类": {"flow_Ls": 20, "guns": 4, "duration_h": 3.0},
+    "乙类": {"flow_Ls": 20, "guns": 4, "duration_h": 3.0},
+    "丙类_H>50m": {"flow_Ls": 40, "guns": 8, "duration_h": 3.0},
+    "丙类_24m<H≤50m": {"flow_Ls": 30, "guns": 6, "duration_h": 3.0},
+    "丙类_H≤24m": {"flow_Ls": 20, "guns": 4, "duration_h": 3.0},
+    "丁类_H>24m": {"flow_Ls": 20, "guns": 4, "duration_h": 2.0},
+    "丁类_H≤24m": {"flow_Ls": 10, "guns": 2, "duration_h": 2.0},
+    "戊类_H>24m": {"flow_Ls": 20, "guns": 4, "duration_h": 2.0},
+    "戊类_H≤24m": {"flow_Ls": 10, "guns": 2, "duration_h": 2.0},
+    "citation": "GB 50974-2014 表3.5.2"
+  },
+  "industrial_warehouse": {
+    "甲类": {"flow_Ls": 25, "guns": 5, "duration_h": 3.0},
+    "乙类": {"flow_Ls": 25, "guns": 5, "duration_h": 3.0},
+    "丙类_H>24m_V>10000": {"flow_Ls": 40, "guns": 8, "duration_h": 3.0},
+    "丙类_H>24m_V≤10000": {"flow_Ls": 30, "guns": 6, "duration_h": 3.0},
+    "丙类_H≤24m": {"flow_Ls": 25, "guns": 5, "duration_h": 3.0},
+    "丁类_H>24m": {"flow_Ls": 20, "guns": 4, "duration_h": 2.0},
+    "丁类_H≤24m": {"flow_Ls": 10, "guns": 2, "duration_h": 2.0},
+    "戊类_H>24m": {"flow_Ls": 20, "guns": 4, "duration_h": 2.0},
+    "戊类_H≤24m": {"flow_Ls": 10, "guns": 2, "duration_h": 2.0},
+    "citation": "GB 50974-2014 表3.5.2"
+  }
+}

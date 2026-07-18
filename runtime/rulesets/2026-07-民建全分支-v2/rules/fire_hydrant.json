@@ -1,0 +1,105 @@
+{
+  "scope": "fire_hydrant",
+  "description": "消火栓规则",
+  "rules": [
+    {
+      "id": "FH-0082",
+      "scope": "fire_hydrant",
+      "condition": "民用建筑/厂房/仓库/储罐/堆场周围",
+      "conclusion": "应设置室外消火栓系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.1.2条",
+      "priority": 95,
+      "tags": [],
+      "design_params": {
+        "设计流量": "根据建筑体积和类型查 GB 50974-2014 表3.3.2",
+        "布置间距": "≤ 120m（室外消火栓保护半径 ≤ 150m）",
+        "距路边": "≤ 2m，距建筑外墙 ≥ 5m",
+        "栓口直径": "DN65（配DN100管道）",
+        "数量": "不少于2个（按设计流量和保护半径计算）"
+      }
+    },
+    {
+      "id": "FH-0083",
+      "scope": "fire_hydrant",
+      "condition": "高层公共建筑",
+      "conclusion": "应设置室内消火栓系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.2.1-2条",
+      "priority": 95,
+      "tags": [],
+      "design_params": {
+        "消火栓布置间距": "≤ 30m（保证2支水枪充实水柱同时到达任意部位）",
+        "充实水柱": "≥ 13m（H>24m时）",
+        "栓口动压": "0.35~0.50 MPa",
+        "栓口直径": "DN65",
+        "水带长度": "25m，衬胶水带",
+        "水枪喷嘴口径": "19mm",
+        "屋顶试验消火栓": "设1个，用于检测压力"
+      }
+    },
+    {
+      "id": "FH-0084",
+      "scope": "fire_hydrant",
+      "condition": "住宅H>21m",
+      "conclusion": "应设置室内消火栓系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.2.1-2条",
+      "priority": 95,
+      "tags": [],
+      "design_params": {
+        "消火栓布置间距": "≤ 30m",
+        "充实水柱": "≥ 10m（H≤100m）或 ≥ 13m（H>100m）",
+        "栓口动压": "0.25~0.35 MPa",
+        "栓口直径": "DN65",
+        "水带长度": "25m，衬胶水带"
+      }
+    },
+    {
+      "id": "FH-0085",
+      "scope": "fire_hydrant",
+      "condition": "建筑占地面积>300㎡厂房和仓库",
+      "conclusion": "应设置室内消火栓系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.2.1-1条",
+      "priority": 95,
+      "tags": [],
+      "design_params": {
+        "消火栓布置间距": "≤ 30m（保证2支水枪充实水柱同时到达任意部位）",
+        "充实水柱": "≥ 13m",
+        "栓口动压": "0.35~0.50 MPa",
+        "栓口直径": "DN65"
+      }
+    },
+    {
+      "id": "FH-0086",
+      "scope": "fire_hydrant",
+      "condition": "H>24m建筑或工业建筑或室内净高>8m民用建筑",
+      "conclusion": "消火栓栓口动压>=0.35MPa+充实水柱>=13m",
+      "conclusion_type": "required",
+      "citation": "GB 50974-2014 第7.4.12-2条",
+      "priority": 85,
+      "tags": []
+    },
+    {
+      "id": "FH-0087",
+      "scope": "fire_hydrant",
+      "condition": "消防电梯前室",
+      "conclusion": "应设室内消火栓（计入使用数量）",
+      "conclusion_type": "required",
+      "citation": "GB 50974-2014 第7.4.5条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "FH-0088",
+      "scope": "fire_hydrant",
+      "condition": "各层（含设备层）",
+      "conclusion": "均应设消火栓",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第3.0.5-3条",
+      "priority": 90,
+      "tags": []
+    }
+  ]
+}

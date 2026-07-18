@@ -1,0 +1,20 @@
+{
+  "table": "extinguisher_config",
+  "description": "灭火器配置基准（依据 GB 50140-2005 第5-6章）",
+  "A类火灾": {
+    "轻危险级": {"min_rating": "1A", "max_distance_m": 25, "unit_area_per_A": "100 m²/A", "K_correction": {"无室内消火栓和灭火系统": 1.0, "设有室内消火栓系统": 0.9, "设有灭火系统": 0.7, "设有室内消火栓和灭火系统": 0.5, "可燃物露天堆场/甲乙丙类液体储罐区/可燃气体储罐区": 0.3}, "recommended_type": "ABC干粉灭火器/水基型灭火器（MF/ABC2或MF/ABC3）"},
+    "中危险级": {"min_rating": "2A", "max_distance_m": 20, "unit_area_per_A": "75 m²/A", "K_correction": {"无室内消火栓和灭火系统": 1.0, "设有室内消火栓系统": 0.9, "设有灭火系统": 0.7, "设有室内消火栓和灭火系统": 0.5}, "recommended_type": "ABC干粉灭火器（MF/ABC4）"},
+    "严重危险级": {"min_rating": "3A", "max_distance_m": 15, "unit_area_per_A": "50 m²/A", "K_correction": {"无室内消火栓和灭火系统": 1.0, "设有室内消火栓系统": 0.9, "设有灭火系统": 0.7, "设有室内消火栓和灭火系统": 0.5}, "recommended_type": "ABC干粉灭火器（MF/ABC5或MF/ABC8）"},
+    "citation": "GB 50140-2005 表5.2.1/表6.2.1/表6.2.2"
+  },
+  "B类火灾": {
+    "轻危险级": {"min_rating": "21B", "max_distance_m": 12, "unit_area_per_B": "1.5 m²/B", "recommended_type": "ABC干粉灭火器（B类）/CO₂灭火器"},
+    "中危险级": {"min_rating": "55B", "max_distance_m": 9, "unit_area_per_B": "1.0 m²/B", "recommended_type": "ABC干粉灭火器（MF/ABC4或MF/ABC5）"},
+    "严重危险级": {"min_rating": "89B", "max_distance_m": 6, "unit_area_per_B": "0.5 m²/B", "recommended_type": "ABC干粉灭火器（MF/ABC8）/大型推车式"},
+    "citation": "GB 50140-2005 表5.2.2/表6.2.2"
+  },
+  "汽车库": {"hazard_level": "中危险级（A类+B类）", "fire_type": "A类+B类", "recommended_type": "ABC干粉灭火器（MF/ABC4或MF/ABC5）", "min_rating": "2A/55B", "max_distance_m": 20, "citation": "GB 50140-2005"},
+  "电气设备": {"recommended_type": "CO₂灭火器/ABC干粉灭火器（非导电）", "notes": "电压>1kV且灭火时不能断电时不应使用灭火器带电扑救"},
+  "calculation_formula": "Q = K × (S / U)，其中 Q=最小需配灭火级别(A或B)，S=保护面积(m²)，U=单位灭火级别最大保护面积(m²/A或m²/B)，K=修正系数",
+  "citation_formula": "GB 50140-2005 第7.3.1/7.3.2条"
+}

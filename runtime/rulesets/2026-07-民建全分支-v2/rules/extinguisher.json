@@ -1,0 +1,66 @@
+{
+  "scope": "extinguisher",
+  "description": "灭火器规则",
+  "rules": [
+    {
+      "id": "ME-0116",
+      "scope": "extinguisher",
+      "condition": "高层住宅公共部位+公共建筑内",
+      "conclusion": "应设置灭火器",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.1.10条",
+      "priority": 85,
+      "tags": []
+    },
+    {
+      "id": "ME-0117",
+      "scope": "extinguisher",
+      "condition": "汽车库（除机械式无车道无人停留）",
+      "conclusion": "应配置灭火器",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第7.2.7条",
+      "priority": 85,
+      "tags": []
+    },
+    {
+      "id": "ME-0118",
+      "scope": "extinguisher",
+      "condition": "计算单元",
+      "conclusion": "灭火器数量>=2具",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第10.0.3-2条",
+      "priority": 85,
+      "tags": []
+    },
+    {
+      "id": "ME-0119",
+      "scope": "extinguisher",
+      "condition": "住宅",
+      "conclusion": "灭火器配置危险等级：轻危险级",
+      "conclusion_type": "required",
+      "citation": "GB 50140-2005 附录D",
+      "priority": 80,
+      "tags": []
+    },
+    {
+      "id": "ME-0120",
+      "scope": "extinguisher",
+      "condition": "普通办公/教学楼/旅馆",
+      "conclusion": "灭火器配置危险等级：中危险级",
+      "conclusion_type": "required",
+      "citation": "GB 50140-2005 附录D",
+      "priority": 80,
+      "tags": []
+    },
+    {
+      "id": "ME-0121",
+      "scope": "extinguisher",
+      "condition": "E类火灾（带电）电压>1kV且不能断电",
+      "conclusion": "不应使用灭火器带电扑救",
+      "conclusion_type": "prohibited",
+      "citation": "GB 55036-2022 第10.0.1-5条",
+      "priority": 85,
+      "tags": []
+    }
+  ]
+}

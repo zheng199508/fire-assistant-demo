@@ -1,0 +1,79 @@
+{
+  "scope": "power",
+  "description": "消防电源规则",
+  "rules": [
+    {
+      "id": "PW-0128",
+      "scope": "power",
+      "condition": "一类高层民用建筑（含一类高层住宅）",
+      "conclusion": "消防用电按一级负荷供电",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.1.1-2条",
+      "priority": 95,
+      "tags": []
+    },
+    {
+      "id": "PW-0129",
+      "scope": "power",
+      "condition": "H>50m乙/丙类厂房和丙类仓库",
+      "conclusion": "消防用电按一级负荷供电",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.1.1-1条",
+      "priority": 95,
+      "tags": [
+        "乙",
+        "丙"
+      ]
+    },
+    {
+      "id": "PW-0130",
+      "scope": "power",
+      "condition": "二类高层民用建筑",
+      "conclusion": "消防用电按二级负荷供电",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.1.2-4条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "PW-0131",
+      "scope": "power",
+      "condition": "消防控制室/消防水泵房/防排烟风机房/消防电梯",
+      "conclusion": "最末一级配电箱设自动切换装置",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.1.8条",
+      "priority": 85,
+      "tags": []
+    },
+    {
+      "id": "PW-0132",
+      "scope": "power",
+      "condition": "消防配电线路暗敷",
+      "conclusion": "不燃性结构内+保护层>=30mm",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.1.10-2条",
+      "priority": 80,
+      "tags": []
+    },
+    {
+      "id": "PW-0133",
+      "scope": "power",
+      "condition": "一类高层民用建筑",
+      "conclusion": "非消防用电负荷宜设电气火灾监控系统",
+      "conclusion_type": "recommended",
+      "citation": "GB 50016-2014 第10.2.7-2条",
+      "priority": 75,
+      "tags": []
+    },
+    {
+      "id": "PW-0134",
+      "scope": "power",
+      "condition": "Ⅰ类汽车库",
+      "conclusion": "消防用电按一级负荷供电",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第9.0.1-1条",
+      "priority": 90,
+      "tags": []
+    }
+  ]
+}

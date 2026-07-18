@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#122b2f">
+  <meta name="description" content="在手机和电脑本地运行的消防设施配置决策助手">
+  <title>消防方案助手</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">跳到主要内容</a>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="消防方案助手首页">
+      <img src="./icons/icon.svg" alt="" width="42" height="42">
+      <span><strong>消防方案助手</strong><small>本地规则专家系统 · 审核中</small></span>
+    </a>
+    <div class="topbar-actions">
+      <span id="networkStatus" class="status-pill" aria-live="polite">检测网络…</span>
+      <button id="installButton" class="button ghost compact" type="button" hidden>安装应用</button>
+      <button id="importProjectButton" class="button ghost compact" type="button">导入</button>
+      <button id="newProjectButton" class="button ghost compact" type="button">新建</button>
+    </div>
+  </header>
+
+  <main id="workspace" class="workspace">
+    <aside class="side-panel" aria-label="评估步骤">
+      <div class="side-intro">
+        <p class="eyebrow">专业工作流</p>
+        <h1>先建立画像，<br>再给出结论。</h1>
+        <p>所有判定均在当前设备完成，不上传项目数据，不调用大模型。</p>
+      </div>
+      <ol id="stepRail" class="step-rail">
+        <li data-step="0" class="active"><span>01</span><div><strong>建筑性质</strong><small>用途与功能</small></div></li>
+        <li data-step="1"><span>02</span><div><strong>基本参数</strong><small>高度与规模</small></div></li>
+        <li data-step="2"><span>03</span><div><strong>特殊场景</strong><small>地下与构造</small></div></li>
+        <li data-step="3"><span>04</span><div><strong>系统条件</strong><small>给水与喷淋</small></div></li>
+        <li data-step="4"><span>05</span><div><strong>确认评估</strong><small>核对后生成</small></div></li>
+      </ol>
+      <div class="privacy-note">
+        <span aria-hidden="true">⌁</span>
+        <div><strong>本地处理</strong><small>画像仅保存在此设备</small></div>
+      </div>
+    </aside>
+
+    <section class="main-panel">
+      <div id="engineBanner" class="engine-banner loading" role="status" aria-live="polite">
+        <span class="pulse-dot"></span>
+        <div><strong id="engineTitle">正在准备专业内核</strong><small id="engineDetail">首次加载需要下载本地运行组件</small></div>
+        <span id="engineProgress">0%</span>
+      </div>
+
+      <form id="assessmentForm" novalidate>
+        <section class="step-page active" data-step-page="0" aria-labelledby="step0Title">
+          <div class="page-heading">
+            <p class="eyebrow">第 1 步 · 建筑性质</p>
+            <h2 id="step0Title">这是什么建筑？</h2>
+            <p>先确定规范主线，后续只展示与当前建筑相关的问题。</p>
+          </div>
+
+          <fieldset class="choice-grid two" aria-label="建筑用途大类">
+            <label class="choice-card">
+              <input type="radio" name="building_type" value="civil" checked>
+              <span class="choice-icon">住</span>
+              <span><strong>民用建筑</strong><small>住宅、医疗、教育、办公、商业等</small></span>
+              <i aria-hidden="true">✓</i>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="building_type" value="industrial">
+              <span class="choice-icon industrial">工</span>
+              <span><strong>工业建筑</strong><small>厂房、仓库及生产储存场景</small></span>
+              <i aria-hidden="true">✓</i>
+            </label>
+          </fieldset>
+
+          <div class="conditional" data-section="civil">
+            <div class="field-row">
+              <label class="field"><span>民用建筑类型</span><select name="civil_subtype"><option value="public">公共建筑</option><option value="residential">住宅建筑</option></select></label>
+              <label class="field" data-section="public"><span>公共建筑主要功能</span><select name="public_building_type"><option>医疗建筑</option><option>教育建筑</option><option>办公建筑</option><option>商业建筑</option><option>文化体育建筑</option><option>其他公共建筑</option></select></label>
+            </div>
+            <div class="inline-options" data-section="public-special">
+              <label><input type="checkbox" name="is_important_public_building"> 重要公共建筑</label>
+              <label><input type="checkbox" name="is_elderly_facility"> 老年人照料设施</label>
+              <label><input type="checkbox" name="is_inpatient"> 含住院部分</label>
+              <label><input type="checkbox" name="is_kindergarten"> 幼儿园/托儿所</label>
+            </div>
+          </div>
+
+          <div class="conditional" data-section="industrial" hidden>
+            <div class="field-row">
+              <label class="field"><span>工业建筑类型</span><select name="industrial_subtype"><option value="workshop">厂房</option><option value="warehouse">仓库</option></select></label>
+              <label class="field"><span>火灾危险性</span><select name="fire_risk"><option value="甲">甲类</option><option value="乙">乙类</option><option value="丙" selected>丙类</option><option value="丁">丁类</option><option value="戊">戊类</option></select></label>
+            </div>
+            <label class="field"><span>主要生产或储存物品</span><input name="substances" type="text" placeholder="例如：木材、柴油（多个用逗号分隔）"><small>仅用于已有物质风险映射；未覆盖物质会要求人工核验。</small></label>
+          </div>
+
+          <div class="demo-strip">
+            <span>快速试算</span>
+            <button type="button" data-demo="residential">60m 高层住宅</button>
+            <button type="button" data-demo="hospital">36m 医疗建筑</button>
+            <button type="button" data-demo="workshop">15m 丙类厂房</button>
+          </div>
+        </section>
+
+        <section class="step-page" data-step-page="1" aria-labelledby="step1Title" hidden>
+          <div class="page-heading"><p class="eyebrow">第 2 步 · 基本参数</p><h2 id="step1Title">建筑规模与使用情况</h2><p>临界值直接影响建筑分类和设施设置，请使用设计值。</p></div>
+          <div class="form-grid three">
+            <label class="field required"><span>建筑高度</span><div class="input-unit"><input name="height_m" type="number" min="0" step="0.1" value="24" required><em>m</em></div></label>
+            <label class="field required"><span>地上层数</span><div class="input-unit"><input name="floors_above" type="number" min="1" step="1" value="6" required><em>层</em></div></label>
+            <label class="field"><span>耐火等级</span><select name="fire_resistance"><option value="">由系统建议</option><option>一级</option><option>二级</option><option>三级</option><option>四级</option></select></label>
+            <label class="field required"><span>典型层建筑面积</span><div class="input-unit"><input name="floor_area_sqm" type="number" min="0" step="10" value="1000" required><em>㎡</em></div></label>
+            <label class="field"><span>总建筑面积</span><div class="input-unit"><input name="total_area_sqm" type="number" min="0" step="10" placeholder="可自动估算"><em>㎡</em></div></label>
+            <label class="field"><span>室内净高</span><div class="input-unit"><input name="clear_height_m" type="number" min="0" step="0.1" value="3"><em>m</em></div></label>
+            <label class="field"><span>最大使用人数</span><div class="input-unit"><input name="max_occupants" type="number" min="0" step="10" value="0"><em>人</em></div></label>
+            <label class="field"><span>最长疏散走道</span><div class="input-unit"><input name="corridor_length_m" type="number" min="0" step="0.5" value="0"><em>m</em></div></label>
+            <label class="field"><span>最大单层营业面积</span><div class="input-unit"><input name="max_single_floor_area" type="number" min="0" step="10" value="0"><em>㎡</em></div></label>
+          </div>
+          <div class="info-callout"><strong>边界值提示</strong><p>24m、27m、32m、33m、50m、54m 等高度附近可能产生不同结论。系统会按实际输入值判定，不进行模糊取整。</p></div>
+        </section>
+
+        <section class="step-page" data-step-page="2" aria-labelledby="step2Title" hidden>
+          <div class="page-heading"><p class="eyebrow">第 3 步 · 特殊场景</p><h2 id="step2Title">地下空间与特殊构造</h2><p>只勾选工程实际存在的场景，避免无关规则进入报告。</p></div>
+          <div class="toggle-list">
+            <label class="toggle-card"><input type="checkbox" name="has_basement"><span class="switch"></span><span><strong>设有地下室或半地下室</strong><small>进入地下空间专项判断</small></span></label>
+            <label class="toggle-card"><input type="checkbox" name="has_garage"><span class="switch"></span><span><strong>设有汽车库</strong><small>按停车数量和面积自动判定车库类别</small></span></label>
+            <label class="toggle-card"><input type="checkbox" name="has_large_atrium"><span class="switch"></span><span><strong>设有中庭</strong><small>影响防火分隔和排烟要求</small></span></label>
+            <label class="toggle-card"><input type="checkbox" name="has_equipment_room"><span class="switch"></span><span><strong>设有重要设备用房</strong><small>变配电、通信、发电机等</small></span></label>
+            <label class="toggle-card"><input type="checkbox" name="has_fire_control_room"><span class="switch"></span><span><strong>设有消防控制室</strong><small>核验位置与系统配置</small></span></label>
+            <label class="toggle-card"><input type="checkbox" name="has_fire_pump_room"><span class="switch"></span><span><strong>设有消防水泵房</strong><small>核验位置与防水淹措施</small></span></label>
+          </div>
+          <div id="basementFields" class="form-grid three nested-fields" hidden>
+            <label class="field"><span>地下层数</span><div class="input-unit"><input name="floors_below" type="number" min="0" step="1" value="1"><em>层</em></div></label>
+            <label class="field"><span>地下室主要功能</span><select name="basement_function"><option value="">请选择</option><option>汽车库</option><option>设备用房</option><option>商业</option><option>仓储</option><option>其他</option></select></label>
+            <label class="field"><span>地下环境温度</span><div class="input-unit"><input name="environment_temp" type="number" step="1" value="10"><em>℃</em></div></label>
+          </div>
+          <div id="garageFields" class="form-grid two nested-fields" hidden>
+            <label class="field"><span>停车数量</span><div class="input-unit"><input name="garage_parking_spots" type="number" min="0" step="1" value="50"><em>辆</em></div></label>
+            <label class="field"><span>汽车库总面积</span><div class="input-unit"><input name="garage_total_area" type="number" min="0" step="10" value="2000"><em>㎡</em></div></label>
+          </div>
+        </section>
+
+        <section class="step-page" data-step-page="3" aria-labelledby="step3Title" hidden>
+          <div class="page-heading"><p class="eyebrow">第 4 步 · 系统条件</p><h2 id="step3Title">给水、电源与已有设计</h2><p>这些条件会改变消防水池、水箱及系统参数，不确定时请选择保守项。</p></div>
+          <div class="form-grid two">
+            <label class="field"><span>自动喷水灭火覆盖情况</span><select name="sprinkler_coverage"><option>不设置</option><option>局部设置</option><option>全部设置</option></select></label>
+            <label class="field"><span>高位消防水箱已知容积</span><div class="input-unit"><input name="water_tank_volume" type="number" min="0" step="1" value="0"><em>m³</em></div><small>填 0 表示由系统按画像查表。</small></label>
+          </div>
+          <div class="toggle-list compact-list">
+            <label class="toggle-card"><input type="checkbox" name="dual_municipal_water"><span class="switch"></span><span><strong>两路可靠市政消防供水</strong><small>环状管网及不同市政干管引入</small></span></label>
+            <label class="toggle-card"><input type="checkbox" name="municipal_outdoor_flow_ok"><span class="switch"></span><span><strong>市政可保证室外设计流量</strong><small>需有供水资料支持</small></span></label>
+            <label class="toggle-card"><input type="checkbox" name="power_dual_supply"><span class="switch"></span><span><strong>具备双电源条件</strong><small>消防负荷供电条件</small></span></label>
+            <label class="toggle-card"><input type="checkbox" name="has_central_ac"><span class="switch"></span><span><strong>设集中空调系统</strong><small>影响部分场景的系统设置</small></span></label>
+          </div>
+          <label class="field"><span>消防水池设置情况</span><select name="water_pool_type"><option value="">尚未确定</option><option>地下消防水池</option><option>地上消防水池</option><option>与生活水池合用</option><option>不设置</option></select></label>
+        </section>
+
+        <section class="step-page" data-step-page="4" aria-labelledby="step4Title" hidden>
+          <div class="page-heading"><p class="eyebrow">第 5 步 · 确认评估</p><h2 id="step4Title">最后核对一次建筑画像</h2><p>生成后仍可返回修改。报告会记录实际规则包版本。</p></div>
+          <div id="reviewGrid" class="review-grid"></div>
+          <label class="confirmation"><input id="accuracyConfirmation" type="checkbox"><span>我已核对以上输入。对于不确定的现场条件，我会在正式使用前由专业人员复核。</span></label>
+          <div class="warning-callout"><strong>使用边界</strong><p>结果用于前期沟通和方案参考，不能替代正式消防设计、审图意见或注册执业人员签章文件。</p></div>
+        </section>
+
+        <div class="form-actions">
+          <button id="previousButton" class="button secondary" type="button" hidden>上一步</button>
+          <span class="autosave-state" id="autosaveState">已在本机保存</span>
+          <button id="nextButton" class="button primary" type="button">下一步</button>
+          <button id="evaluateButton" class="button primary evaluate" type="submit" hidden disabled>生成专业报告</button>
+        </div>
+      </form>
+
+      <section id="results" class="results" hidden aria-labelledby="resultTitle">
+        <div class="result-topline"><div><p class="eyebrow">评估完成</p><h2 id="resultTitle">消防设施配置建议（审核版）</h2><p id="resultMeta"></p></div><button id="editProfileButton" type="button" class="button secondary">修改画像</button></div>
+        <div id="riskBanner" class="risk-banner" hidden></div>
+        <div class="metric-grid">
+          <article><span>消防用水总量</span><strong id="waterMetric">—</strong><small>m³</small></article>
+          <article><span>高位消防水箱</span><strong id="tankMetric">—</strong><small>m³</small></article>
+          <article><span>防火分区限值</span><strong id="compartmentMetric">—</strong><small>㎡</small></article>
+          <article><span>核心强制结论</span><strong id="conclusionMetric">—</strong><small>项</small></article>
+        </div>
+        <div id="conclusionCards" class="conclusion-cards"></div>
+        <div class="report-toolbar"><div><strong>完整报告</strong><small>所有内容由本地规则包生成</small></div><div><button id="downloadWord" class="button secondary compact" type="button">下载 Word</button><button id="downloadMarkdown" class="button ghost compact" type="button">下载 Markdown</button><button id="downloadJson" class="button ghost compact" type="button">导出项目</button><button id="printReport" class="button primary compact" type="button">打印 / PDF</button></div></div>
+        <article id="reportContent" class="report-content"></article>
+      </section>
+    </section>
+  </main>
+
+  <input id="importProjectInput" type="file" accept="application/json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <footer><span>消防方案助手 · 零成本本地审核版</span><span>规则结论需逐条专业复核</span></footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>

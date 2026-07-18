@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "ruleset": "2026-07-民建全分支-v2",
+  "release_readiness": {
+    "status": "internal_review",
+    "public_release_ready": false,
+    "known_gaps": [
+      "现有回归测试主要证明程序逻辑自洽，不等于规范语义正确",
+      "GB 55037-2022、GB 50084-2017、GB 50116-2013、GB 51251-2017尚未形成直接规则引用",
+      "77条规则尚未精确关联已录入的规范原文",
+      "规则条件仍有部分依赖中文启发式匹配"
+    ]
+  },
+  "normative_audit": {
+    "rules": 152,
+    "affected_rules": 86,
+    "parsed_repeal_entries": 7,
+    "failed_repeal_entries": 0
+  },
+  "files": [
+    {
+      "path": "engine/__init__.py",
+      "sha256": "a289aa8dd2fc7b14a6a39948e0aa31416a47cb3b4624ecd34c41cffb7d2a56a3",
+      "bytes": 64
+    },
+    {
+      "path": "engine/browser_api.py",
+      "sha256": "67402b765c5e3f232e508ad7d7743c782e25e433a871722b37dc9366a50fdeae",
+      "bytes": 4358
+    },
+    {
+      "path": "engine/calculator.py",
+      "sha256": "d5b0fba9ee11bb90c9f625ba03efe17fa16645c1abadf92c6e7f6821ba706827",
+      "bytes": 36243
+    },
+    {
+      "path": "engine/classifier.py",
+      "sha256": "032cc102b52067dbe564cdfb8ba6bab8e65c3b5f035ed1ca77d360728fcb26e5",
+      "bytes": 5930
+    },
+    {
+      "path": "engine/decision_engine.py",
+      "sha256": "d53b1ce56eb0dab72a8de7a75f6c84e08757f8898566df137ef0fbffb9ca7c86",
+      "bytes": 35951
+    },
+    {
+      "path": "engine/ooxml_exporter.py",
+      "sha256": "522eb6d1ada1a48ea3d9e86f23525601d8f5e0b2cc43651d855d46fc7a512549",
+      "bytes": 18363
+    },
+    {
+      "path": "engine/report_builder.py",
+      "sha256": "f31e20c6666db35751151b9d87d4ab17e4559516bc663f843efb318b6a7878fe",
+      "bytes": 42193
+    },
+    {
+      "path": "engine/rule_loader.py",
+      "sha256": "85b3873b73ddc5930b1668e4b57d676558b57ad128893bec5ae8e5b23323bc48",
+      "bytes": 2867
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/decision_tree.json",
+      "sha256": "b1ff26b2a39a6e49d4097153d23a28ea1a11f5f5aadcc75a17cfd9a2eea46096",
+      "bytes": 5580
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/evacuation_params.json",
+      "sha256": "276fdf6519df8bb106083ceebec8dde305db53c3dba1c83a242752ad36eb8613",
+      "bytes": 3636
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/extinguisher_config.json",
+      "sha256": "4a7d5cd778b75d11b0a71cac500e43f5c1b0d4a7b33a3e814d5d35704d842b3d",
+      "bytes": 2486
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/fire_compartment_detail.json",
+      "sha256": "f8e09e78f3937f64f01dd22f944ee8243f88fc3a483488fa6ffa4dd8039ce453",
+      "bytes": 6267
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/fire_door_rating.json",
+      "sha256": "14765c8db282ad04da51b4a12f6e170e383e26f4bb7ae47eac9fda05cbe38665",
+      "bytes": 1566
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/fire_duration.json",
+      "sha256": "f123499849d72dc121aa62df9c4c55a72a5a5c645a94932f6e8764b4c81ce20d",
+      "bytes": 372
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/fire_resistance_detail.json",
+      "sha256": "a1d69174648bd87d58a3ba2466abb11ddcea537509190264f61b223792371387",
+      "bytes": 3542
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/hazard_level.json",
+      "sha256": "e60bfdd1cb70b7dce6c867def578edebe7f8d88e8ef14574ed72689176badfe1",
+      "bytes": 315
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/hydrant_flow.json",
+      "sha256": "88ed4dcc44d2c86ce76ef19a4db22f7bcc5b9daed09b7a1662004f4bf82a15bc",
+      "bytes": 522
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/indoor_hydrant_flow.json",
+      "sha256": "b578da07b4906399653b2fa980f3f5a3d9ab37ac16d1b5fab9a2410726587351",
+      "bytes": 2050
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/norm_texts.json",
+      "sha256": "527bd1f2b020f0465368805153aff6f18310e976e8e378e925c8c351c7dc9413",
+      "bytes": 11375
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/outdoor_hydrant_flow.json",
+      "sha256": "b58a74b911082b0869205aae2f628e5578b7e22fb86338cec7f1addd36568130",
+      "bytes": 2180
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/smoke_exhaust.json",
+      "sha256": "31bc5f17ca3474f0b886631aec8218cd548dc445ccbfebe09c39c7f9edde86b9",
+      "bytes": 1892
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/special_systems.json",
+      "sha256": "110b63171e79246106e08992c00a2430c313189b7528ab3c1048ede9b112bc7a",
+      "bytes": 2769
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/sprinkler_params.json",
+      "sha256": "1d67362734ebbf93eba01cb39d7adc87efb61638f6a89c24bfbfb96787f4ef10",
+      "bytes": 4652
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/substance_risk_map.json",
+      "sha256": "4233d6497abf9e8288c65daa5303d92e02daec64a98650dafc993704f7a343be",
+      "bytes": 6696
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/lookup_tables/water_tank.json",
+      "sha256": "ecfa48e88195477a10c0b8cfb8d1f0e28ab3d9c5229a3516e396bbf28a20216f",
+      "bytes": 547
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/meta.json",
+      "sha256": "8cda518a4ddecc4f3973c9abc1f78b091f66e24715767c0ec3d6445a00153449",
+      "bytes": 3919
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/civil_public.json",
+      "sha256": "be34bacd5ce685090ea9a5e3eb82d2766558c8361bc10a5b21a45f96764a5147",
+      "bytes": 15360
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/civil_residential.json",
+      "sha256": "bc96cb32f3faabebe42bc13c1e87f7afd937f51bc97302afc78c843e87b5bcbb",
+      "bytes": 9114
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/extinguisher.json",
+      "sha256": "ce2073a7f16485b12940b2d438571cf05c173c93e7ee11416c97e41c3ad3b237",
+      "bytes": 1926
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/fire_alarm.json",
+      "sha256": "380bb92fdfc47c49667d54340d21d21082dd3d3c5a182ecf70fcacd4e4b0faff",
+      "bytes": 3881
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/fire_hydrant.json",
+      "sha256": "a6d1c6109bbe81af5e71fc31990f1f2f7fad67e1a089fd731c698e1c36688017",
+      "bytes": 3594
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/garage.json",
+      "sha256": "8a0b68759610e21690ab64fedac396a78abd0e76955adbc2dd4444a37fb68046",
+      "bytes": 4807
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/industrial_warehouse.json",
+      "sha256": "b4c896575e9b3aaad913d817af66d10208fd0db1316d56d176dc430ef3a4eab3",
+      "bytes": 4170
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/industrial_workshop.json",
+      "sha256": "6bbf819c4d9ddfcfc0d73628c4308eb7589254f4cf39a4a69abd61fae63cf9bc",
+      "bytes": 6044
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/lighting.json",
+      "sha256": "1c4e26eaf82b3bc4918603116d3bbd1c4b39358489bfaa5a12cb390126346bb0",
+      "bytes": 2150
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/power.json",
+      "sha256": "a56be60c2bf42b40e901b8cbba1976c112e435a6082b3b19ad3743b91b8e2085",
+      "bytes": 2320
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/smoke_control.json",
+      "sha256": "f9b58ba3acaf08e48294ab35faafa94b9f9f9f919e9e0be23f3b3d580ddee1b6",
+      "bytes": 3353
+    },
+    {
+      "path": "rulesets/2026-07-民建全分支-v2/rules/sprinkler.json",
+      "sha256": "917d29a0f61a5d53903b095a4fe9b19721ddfecfa5c5cb147a0b4d1d612f10df",
+      "bytes": 3718
+    }
+  ]
+}

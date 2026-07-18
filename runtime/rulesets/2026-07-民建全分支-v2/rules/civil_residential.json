@@ -1,0 +1,324 @@
+{
+  "scope": "civil.residential",
+  "description": "住宅建筑规则",
+  "rules": [
+    {
+      "id": "CR-0001",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 54m",
+      "conclusion": "一类高层住宅建筑",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表5.1.1",
+      "priority": 100,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0002",
+      "scope": "civil.residential",
+      "condition": "住宅 && 27m < H <= 54m",
+      "conclusion": "二类高层住宅建筑",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表5.1.1",
+      "priority": 100,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0003",
+      "scope": "civil.residential",
+      "condition": "住宅 && H <= 27m",
+      "conclusion": "单、多层住宅建筑",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表5.1.1",
+      "priority": 100,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0004",
+      "scope": "civil.residential",
+      "condition": "一类高层住宅",
+      "conclusion": "耐火等级不应低于一级",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.1.3-1条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "residential",
+        "一类高层住宅"
+      ]
+    },
+    {
+      "id": "CR-0005",
+      "scope": "civil.residential",
+      "condition": "二类高层住宅",
+      "conclusion": "耐火等级不应低于二级",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.1.3-2条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "residential",
+        "二类高层住宅"
+      ]
+    },
+    {
+      "id": "CR-0006",
+      "scope": "civil.residential",
+      "condition": "地下或半地下建筑(室)",
+      "conclusion": "耐火等级不应低于一级",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.1.3-1条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "residential",
+        "地下室"
+      ]
+    },
+    {
+      "id": "CR-0007",
+      "scope": "civil.residential",
+      "condition": "一类高层住宅（一级耐火）",
+      "conclusion": "防火分区最大允许建筑面积 1500㎡",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表5.3.1",
+      "priority": 80,
+      "tags": [
+        "civil",
+        "residential",
+        "一类高层住宅"
+      ]
+    },
+    {
+      "id": "CR-0008",
+      "scope": "civil.residential",
+      "condition": "住宅设自动灭火系统",
+      "conclusion": "防火分区面积增加1.0倍（1500→3000㎡）",
+      "conclusion_type": "conditional",
+      "citation": "GB 50016-2014 表5.3.1注1",
+      "priority": 75,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0009",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 54m",
+      "conclusion": "每个单元每层安全出口不应少于2个",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.25-3条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0010",
+      "scope": "civil.residential",
+      "condition": "住宅 && 27m < H <= 54m && (每单元每层>650㎡ || 户门至安全出口>10m)",
+      "conclusion": "每个单元每层安全出口不应少于2个",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.25-2条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0011",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 33m",
+      "conclusion": "疏散楼梯应为防烟楼梯间",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.27-3条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0012",
+      "scope": "civil.residential",
+      "condition": "住宅 && 21m < H <= 33m",
+      "conclusion": "应采用封闭楼梯间（户门乙级防火门时可用敞开楼梯间）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.27-2条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0013",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 100m",
+      "conclusion": "应设置避难层",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.31条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0014",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 54m",
+      "conclusion": "每户应有一间避难房间（靠外墙+可开启外窗+墙体≥1.00h+乙级门）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第5.5.32条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0015",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 33m",
+      "conclusion": "应设置消防电梯",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第7.3.1-1条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0016",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 100m",
+      "conclusion": "应设置火灾自动报警系统（全楼）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.2条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0017",
+      "scope": "civil.residential",
+      "condition": "住宅 && 54m < H <= 100m",
+      "conclusion": "公共部位应设置火灾自动报警系统，套内宜设置火灾探测器",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.2条",
+      "priority": 90,
+      "notes": "公共部位=应(必须)；套内=宜(推荐)",
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0018",
+      "scope": "civil.residential",
+      "condition": "住宅 && H <= 54m",
+      "conclusion": "公共部位宜设置火灾自动报警系统；有需联动控制设施时应设",
+      "conclusion_type": "recommended",
+      "citation": "GB 50016-2014 第8.4.2条",
+      "priority": 80,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0019",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 100m",
+      "conclusion": "应设置自动喷水灭火系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.3-4条",
+      "priority": 90,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0020",
+      "scope": "civil.residential",
+      "condition": "一类高层住宅",
+      "conclusion": "消防用电按一级负荷供电",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.1.1-2条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "residential",
+        "一类高层住宅"
+      ]
+    },
+    {
+      "id": "CR-0021",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 54m",
+      "conclusion": "应设置灯光疏散指示标志",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.3.5条",
+      "priority": 85,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0022",
+      "scope": "civil.residential",
+      "condition": "高层住宅公共部位",
+      "conclusion": "应设置灭火器",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.1.10条",
+      "priority": 80,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0023",
+      "scope": "civil.residential",
+      "condition": "住宅 && H > 21m",
+      "conclusion": "应设置室内消火栓系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.2.1-2条",
+      "priority": 95,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    },
+    {
+      "id": "CR-0024",
+      "scope": "civil.residential",
+      "condition": "高层住宅公共部位",
+      "conclusion": "应设置具有语音功能的火灾声警报装置或应急广播",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.2条",
+      "priority": 85,
+      "tags": [
+        "civil",
+        "residential"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "scope": "industrial.workshop",
+  "description": "厂房规则",
+  "rules": [
+    {
+      "id": "IW-0043",
+      "scope": "industrial.workshop",
+      "condition": "使用/产生闪点<28℃液体",
+      "conclusion": "甲类",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表3.1.1",
+      "priority": 100,
+      "tags": [
+        "industrial",
+        "workshop",
+        "甲"
+      ]
+    },
+    {
+      "id": "IW-0044",
+      "scope": "industrial.workshop",
+      "condition": "爆炸下限<10%的气体",
+      "conclusion": "甲类",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表3.1.1",
+      "priority": 100,
+      "tags": [
+        "industrial",
+        "workshop",
+        "甲"
+      ]
+    },
+    {
+      "id": "IW-0045",
+      "scope": "industrial.workshop",
+      "condition": "28℃<=闪点<60℃液体 || 爆炸下限>=10%气体",
+      "conclusion": "乙类",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表3.1.1",
+      "priority": 100,
+      "tags": [
+        "industrial",
+        "workshop",
+        "乙"
+      ]
+    },
+    {
+      "id": "IW-0046",
+      "scope": "industrial.workshop",
+      "condition": "闪点>=60℃液体 || 可燃固体",
+      "conclusion": "丙类",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表3.1.1",
+      "priority": 100,
+      "tags": [
+        "industrial",
+        "workshop",
+        "丙"
+      ]
+    },
+    {
+      "id": "IW-0047",
+      "scope": "industrial.workshop",
+      "condition": "高温/熔化状态下产生强辐射热/火花/火焰的生产",
+      "conclusion": "丁类",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表3.1.1",
+      "priority": 100,
+      "tags": [
+        "industrial",
+        "workshop",
+        "丁"
+      ]
+    },
+    {
+      "id": "IW-0048",
+      "scope": "industrial.workshop",
+      "condition": "常温下加工不燃烧物质",
+      "conclusion": "戊类",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表3.1.1",
+      "priority": 100,
+      "tags": [
+        "industrial",
+        "workshop",
+        "戊"
+      ]
+    },
+    {
+      "id": "IW-0049",
+      "scope": "industrial.workshop",
+      "condition": "同一厂房/防火分区内不同火灾危险性",
+      "conclusion": "按火灾危险性较大的部分确定",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第3.1.2条",
+      "priority": 95,
+      "tags": [
+        "industrial",
+        "workshop"
+      ]
+    },
+    {
+      "id": "IW-0050",
+      "scope": "industrial.workshop",
+      "condition": "高层厂房 || 甲、乙类厂房（一般）",
+      "conclusion": "耐火等级不应低于二级",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第3.2.2条",
+      "priority": 90,
+      "tags": [
+        "industrial",
+        "workshop",
+        "甲",
+        "乙",
+        "高层厂房"
+      ]
+    },
+    {
+      "id": "IW-0051",
+      "scope": "industrial.workshop",
+      "condition": "丙类厂房+一级耐火",
+      "conclusion": "不限层；单层不限/多层6000/高层3000/地下500㎡",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 表3.3.1",
+      "priority": 85,
+      "tags": [
+        "industrial",
+        "workshop",
+        "丙"
+      ]
+    },
+    {
+      "id": "IW-0052",
+      "scope": "industrial.workshop",
+      "condition": "厂房设自动灭火系统",
+      "conclusion": "防火分区面积增加1.0倍；丁戊类地上厂房不限",
+      "conclusion_type": "conditional",
+      "citation": "GB 50016-2014 第3.3.3条",
+      "priority": 80,
+      "tags": [
+        "industrial",
+        "workshop"
+      ]
+    },
+    {
+      "id": "IW-0053",
+      "scope": "industrial.workshop",
+      "condition": "甲、乙类生产场所",
+      "conclusion": "甲、乙类生产场所（厂房）不应设置在地下或半地下",
+      "conclusion_type": "prohibited",
+      "citation": "GB 50016-2014 第3.3.4条",
+      "priority": 100,
+      "tags": [
+        "industrial",
+        "workshop",
+        "甲",
+        "乙"
+      ]
+    },
+    {
+      "id": "IW-0054",
+      "scope": "industrial.workshop",
+      "condition": "员工宿舍 + 厂房",
+      "conclusion": "员工宿舍严禁设置在厂房内",
+      "conclusion_type": "prohibited",
+      "citation": "GB 50016-2014 第3.3.5条",
+      "priority": 100,
+      "tags": [
+        "industrial",
+        "workshop"
+      ]
+    },
+    {
+      "id": "IW-0055",
+      "scope": "industrial.workshop",
+      "condition": "变配电站 + 甲、乙类厂房内或贴邻（非专用）",
+      "conclusion": "不应设置",
+      "conclusion_type": "prohibited",
+      "citation": "GB 50016-2014 第3.3.8条",
+      "priority": 95,
+      "tags": [
+        "industrial",
+        "workshop",
+        "甲",
+        "乙"
+      ]
+    },
+    {
+      "id": "IW-0056",
+      "scope": "industrial.workshop",
+      "condition": "高层乙丙类厂房 || 占地面积>1500㎡木器厂房 || S>500㎡地下丙类厂房",
+      "conclusion": "应设置自动灭火系统（宜自喷）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.1条",
+      "priority": 85,
+      "tags": [
+        "industrial",
+        "workshop",
+        "乙",
+        "丙",
+        "地下室"
+      ]
+    },
+    {
+      "id": "IW-0057",
+      "scope": "industrial.workshop",
+      "condition": "甲、乙类厂房和甲、乙、丙类仓库内的防火墙",
+      "conclusion": "耐火极限不应低于4.00h",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第3.2.9条",
+      "priority": 90,
+      "tags": [
+        "industrial",
+        "workshop",
+        "甲",
+        "乙",
+        "丙"
+      ]
+    }
+  ]
+}

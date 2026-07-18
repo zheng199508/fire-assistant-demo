@@ -1,0 +1,26 @@
+{
+  "table": "hydrant_flow",
+  "description": "室内消火栓设计流量速查（GB 50974 表3.5.2）",
+  "indoor": {
+    "residential_H>54m": {
+      "flow_Ls": 20,
+      "guns": 4
+    },
+    "residential_27-54m": {
+      "flow_Ls": 15,
+      "guns": 3
+    },
+    "public_H>50m_large": {
+      "flow_Ls": 40,
+      "guns": 8
+    },
+    "workshop_丙类_H>50m": {
+      "flow_Ls": 40,
+      "guns": 8
+    },
+    "warehouse_丙类_H>24_V>10000": {
+      "flow_Ls": 40,
+      "guns": 8
+    }
+  }
+}

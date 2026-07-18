@@ -1,0 +1,120 @@
+{
+  "scope": "fire_alarm",
+  "description": "火灾自动报警规则",
+  "rules": [
+    {
+      "id": "FA-0096",
+      "scope": "fire_alarm",
+      "condition": "住宅H>100m",
+      "conclusion": "应设置火灾自动报警系统（全楼）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.2条",
+      "priority": 95,
+      "tags": []
+    },
+    {
+      "id": "FA-0097",
+      "scope": "fire_alarm",
+      "condition": "住宅54m<H<=100m",
+      "conclusion": "公共部位应设FAS，套内宜设火灾探测器",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.2条",
+      "priority": 90,
+      "notes": "公共部位=应(必须)；套内=宜(推荐)",
+      "tags": []
+    },
+    {
+      "id": "FA-0098",
+      "scope": "fire_alarm",
+      "condition": "其他一类高层公共建筑",
+      "conclusion": "应设置火灾自动报警系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.1-12条",
+      "priority": 90,
+      "tags": [
+        "一类高层公建"
+      ]
+    },
+    {
+      "id": "FA-0099",
+      "scope": "fire_alarm",
+      "condition": "歌舞娱乐放映游艺场所",
+      "conclusion": "应设置火灾自动报警系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.1-8条",
+      "priority": 90,
+      "tags": [
+        "歌舞娱乐"
+      ]
+    },
+    {
+      "id": "FA-0100",
+      "scope": "fire_alarm",
+      "condition": "设需与FAS联锁的系统（机械排烟/防烟/雨淋/预作用/消防水炮/气体灭火等）",
+      "conclusion": "应设置火灾自动报警系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.4.1-13条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "FA-0101",
+      "scope": "fire_alarm",
+      "condition": "FAS",
+      "conclusion": "应设置自动和手动触发报警装置",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第12.0.1条",
+      "priority": 95,
+      "tags": [],
+      "design_params": {
+        "系统形式": "集中报警系统（含消防控制室）",
+        "探测器类型": "点型光电感烟探测器（办公室/走道/病房）",
+        "感烟探测器保护面积": "60 m²（层高≤6m）",
+        "手动报警按钮间距": "≤ 30m（走道），每防火分区 ≥ 1个",
+        "消防广播扬声器": "≥ 3W，走道间距 ≤ 25m"
+      }
+    },
+    {
+      "id": "FA-0102",
+      "scope": "fire_alarm",
+      "condition": "手动报警按钮",
+      "conclusion": "每个防火分区/楼层>=1个",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第12.0.7条",
+      "priority": 85,
+      "tags": []
+    },
+    {
+      "id": "FA-0103",
+      "scope": "fire_alarm",
+      "condition": "消防联动控制触发",
+      "conclusion": "两个独立报警触发装置信号的\"与\"逻辑组合",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第12.0.11-1条",
+      "priority": 85,
+      "tags": []
+    },
+    {
+      "id": "FA-0104",
+      "scope": "fire_alarm",
+      "condition": "设有FAS+需联动控制的消防设备",
+      "conclusion": "应设置消防控制室",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.1.7条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "FA-0105",
+      "scope": "fire_alarm",
+      "condition": "Ⅰ类汽车库/修车库 || Ⅱ类地下/半地下/高层汽车库 || 机械式汽车库",
+      "conclusion": "应设置火灾自动报警系统",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第9.0.7条",
+      "priority": 85,
+      "tags": [
+        "地下室"
+      ]
+    }
+  ]
+}

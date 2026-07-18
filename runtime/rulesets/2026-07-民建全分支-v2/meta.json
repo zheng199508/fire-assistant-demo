@@ -1,0 +1,102 @@
+{
+  "standards_version": "2026-07-民建全分支-v2",
+  "description": "消防设施配置决策助手审核版规则库 — 民用建筑与工业建筑常见分支（尚未达到公开发布质量门槛）",
+  "created": "2026-07-05",
+  "standards": [
+    {
+      "id": "GB 55036-2022",
+      "name": "消防设施通用规范",
+      "role": "顶层强制性要求（部分规则映射）",
+      "coverage_status": "partial_rule_mapping",
+      "decision_rule_citations": 15
+    },
+    {
+      "id": "GB 55037-2022",
+      "name": "建筑防火通用规范",
+      "role": "现行全文强制性顶层规范；已补齐本地原文，尚未建立判定规则",
+      "coverage_status": "source_available_no_direct_rules",
+      "decision_rule_citations": 0,
+      "source_origin": "江苏省消防救援总队官网"
+    },
+    {
+      "id": "GB 50016-2014",
+      "name": "建筑设计防火规范（2018年版）",
+      "role": "建筑画像 + 系统设置主框架（部分规则映射）",
+      "coverage_status": "partial_rule_mapping",
+      "decision_rule_citations": 113
+    },
+    {
+      "id": "GB 50067-2014",
+      "name": "汽车库、修车库、停车场设计防火规范",
+      "role": "地下汽车库专项（部分规则映射）",
+      "coverage_status": "partial_rule_mapping",
+      "decision_rule_citations": 18
+    },
+    {
+      "id": "GB 50974-2014",
+      "name": "消防给水及消火栓系统技术规范",
+      "role": "流量/水池/水箱/水泵（少量直接规则 + 参数表）",
+      "coverage_status": "partial_rule_mapping",
+      "decision_rule_citations": 4
+    },
+    {
+      "id": "GB 50084-2017",
+      "name": "自动喷水灭火系统设计规范",
+      "role": "喷淋参数资料；尚无直接判定规则引用",
+      "coverage_status": "lookup_only_no_direct_rules",
+      "decision_rule_citations": 0
+    },
+    {
+      "id": "GB 50116-2013",
+      "name": "火灾自动报警系统设计规范",
+      "role": "报警系统参考资料；尚无直接判定规则引用",
+      "coverage_status": "reference_only_no_direct_rules",
+      "decision_rule_citations": 0
+    },
+    {
+      "id": "GB 51251-2017",
+      "name": "建筑防烟排烟系统技术标准",
+      "role": "防排烟参数资料；尚无直接判定规则引用",
+      "coverage_status": "lookup_only_no_direct_rules",
+      "decision_rule_citations": 0
+    },
+    {
+      "id": "GB 50140-2005",
+      "name": "建筑灭火器配置设计规范",
+      "role": "灭火器（附录D少量直接引用 + 参数表）",
+      "coverage_status": "partial_rule_mapping",
+      "decision_rule_citations": 2
+    }
+  ],
+  "scope_boundary": {
+    "included": [
+      "民用建筑和工业建筑的现有常见规则分支",
+      "地下汽车库常见专项规则",
+      "9本规范的本地资料与元数据",
+      "其中5本规范存在部分直接规则引用，4本尚未建立直接判定规则"
+    ],
+    "excluded": [
+      "储罐区/堆场（GB 50016第4章）",
+      "木结构建筑（GB 50016第11章）",
+      "城市交通隧道（GB 50016第12章）",
+      "施工验收规范",
+      "地方标准"
+    ]
+  },
+  "release_readiness": {
+    "status": "internal_review",
+    "public_release_ready": false,
+    "known_gaps": [
+      "现有回归测试主要证明程序逻辑自洽，不等于规范语义正确",
+      "GB 55037-2022、GB 50084-2017、GB 50116-2013、GB 51251-2017尚未形成直接规则引用",
+      "77条规则尚未精确关联已录入的规范原文",
+      "规则条件仍有部分依赖中文启发式匹配"
+    ]
+  },
+  "conclusion_types": {
+    "required": "应设置/应满足 — 强制必须",
+    "prohibited": "不应/不得/严禁 — 强制禁止",
+    "recommended": "宜 — 推荐，条件许可时首先应做",
+    "conditional": "有条件适用 — 需结合现场进一步判定"
+  }
+}

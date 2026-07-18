@@ -1,0 +1,73 @@
+{
+  "scope": "lighting",
+  "description": "应急照明与疏散指示规则",
+  "rules": [
+    {
+      "id": "EL-0122",
+      "scope": "lighting",
+      "condition": "除H<27m住宅外，民用建筑/厂房/丙类仓库的封闭楼梯间/防烟楼梯间及前室/消防电梯前室/避难走道/避难层",
+      "conclusion": "应设置疏散照明",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.3.1条",
+      "priority": 90,
+      "tags": [
+        "丙"
+      ]
+    },
+    {
+      "id": "EL-0123",
+      "scope": "lighting",
+      "condition": "疏散走道地面最低水平照度",
+      "conclusion": ">=1.0 lx",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.3.2-1条",
+      "priority": 80,
+      "tags": []
+    },
+    {
+      "id": "EL-0124",
+      "scope": "lighting",
+      "condition": "楼梯间/前室/合用前室/避难走道",
+      "conclusion": ">=5.0 lx",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.3.2-3条",
+      "priority": 80,
+      "tags": []
+    },
+    {
+      "id": "EL-0125",
+      "scope": "lighting",
+      "condition": "公共建筑+H>54m住宅+高层厂房(仓库)+甲乙丙类单多层厂房",
+      "conclusion": "应设置灯光疏散指示标志",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.3.5条",
+      "priority": 85,
+      "tags": [
+        "甲",
+        "乙",
+        "丙",
+        "高层厂房"
+      ]
+    },
+    {
+      "id": "EL-0126",
+      "scope": "lighting",
+      "condition": "应急照明备用电源连续供电时间（H>100m民用）",
+      "conclusion": ">=1.50h",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.1.5-1条",
+      "priority": 80,
+      "tags": []
+    },
+    {
+      "id": "EL-0127",
+      "scope": "lighting",
+      "condition": "应急照明备用电源（其他建筑）",
+      "conclusion": ">=0.50h",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第10.1.5-3条",
+      "priority": 80,
+      "tags": []
+    }
+  ]
+}

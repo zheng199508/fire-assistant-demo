@@ -1,0 +1,112 @@
+{
+  "scope": "smoke_control",
+  "description": "防排烟规则",
+  "rules": [
+    {
+      "id": "SC-0106",
+      "scope": "smoke_control",
+      "condition": "防烟楼梯间及其前室",
+      "conclusion": "应设置防烟设施",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.5.1-1条",
+      "priority": 95,
+      "tags": [],
+      "design_params": {
+        "防烟方式": "优先自然排烟（开窗面积 ≥ 2m²），不满足时设机械加压送风",
+        "楼梯间余压": "40~50Pa",
+        "前室余压": "25~30Pa",
+        "加压送风口": "常闭多叶送风口，火灾时电动开启着火层及上下层"
+      }
+    },
+    {
+      "id": "SC-0107",
+      "scope": "smoke_control",
+      "condition": "消防电梯间前室/合用前室",
+      "conclusion": "应设置防烟设施",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.5.1-2条",
+      "priority": 95,
+      "tags": []
+    },
+    {
+      "id": "SC-0108",
+      "scope": "smoke_control",
+      "condition": "H>100m住宅",
+      "conclusion": "应设置机械加压送风系统",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第11.2.1-1条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "SC-0109",
+      "scope": "smoke_control",
+      "condition": "H>50m公共建筑",
+      "conclusion": "应设置机械加压送风系统",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第11.2.1-2条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "SC-0110",
+      "scope": "smoke_control",
+      "condition": "H>50m工业建筑",
+      "conclusion": "应设置机械加压送风系统",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第11.2.1-3条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "SC-0111",
+      "scope": "smoke_control",
+      "condition": "前室/合用前室-走道压差",
+      "conclusion": "25~30Pa",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第11.2.5-1条",
+      "priority": 75,
+      "tags": []
+    },
+    {
+      "id": "SC-0112",
+      "scope": "smoke_control",
+      "condition": "防烟楼梯间-走道压差",
+      "conclusion": "40~50Pa",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第11.2.5-2条",
+      "priority": 75,
+      "tags": []
+    },
+    {
+      "id": "SC-0113",
+      "scope": "smoke_control",
+      "condition": "中庭",
+      "conclusion": "应设置排烟设施",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.5.3-2条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "SC-0114",
+      "scope": "smoke_control",
+      "condition": "长度>20m疏散走道",
+      "conclusion": "应设置排烟设施",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.5.3-5条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "SC-0115",
+      "scope": "smoke_control",
+      "condition": "同一个防烟分区",
+      "conclusion": "应采用同一种排烟方式",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第11.3.1条",
+      "priority": 80,
+      "tags": []
+    }
+  ]
+}

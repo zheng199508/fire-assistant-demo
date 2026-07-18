@@ -1,0 +1,20 @@
+{
+  "name": "消防方案助手",
+  "short_name": "消防助手",
+  "description": "在手机和电脑本地运行的消防设施配置决策助手",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f2",
+  "theme_color": "#122b2f",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

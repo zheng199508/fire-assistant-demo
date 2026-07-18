@@ -1,0 +1,130 @@
+{
+  "table": "fire_compartment_detail",
+  "description": "防火分区最大允许建筑面积（m²）（依据 GB 50016-2014 表3.3.1/表3.3.2/表5.3.1）",
+  "civil": {
+    "高层住宅": {
+      "一级": {"no_sprinkler": 1500, "with_sprinkler": 3000},
+      "citation": "GB 50016-2014 表5.3.1"
+    },
+    "单多层住宅": {
+      "一级": {"no_sprinkler": 2500, "with_sprinkler": 5000},
+      "二级": {"no_sprinkler": 2500, "with_sprinkler": 5000},
+      "三级": {"no_sprinkler": 1200, "with_sprinkler": 2400},
+      "四级": {"no_sprinkler": 600, "with_sprinkler": 1200},
+      "citation": "GB 50016-2014 表5.3.1"
+    },
+    "高层公建": {
+      "一级": {"no_sprinkler": 1500, "with_sprinkler": 3000},
+      "二级": {"no_sprinkler": 1500, "with_sprinkler": 3000},
+      "citation": "GB 50016-2014 表5.3.1"
+    },
+    "单多层公建": {
+      "一级": {"no_sprinkler": 2500, "with_sprinkler": 5000},
+      "二级": {"no_sprinkler": 2500, "with_sprinkler": 5000},
+      "三级": {"no_sprinkler": 1200, "with_sprinkler": 2400},
+      "四级": {"no_sprinkler": 600, "with_sprinkler": 1200},
+      "citation": "GB 50016-2014 表5.3.1"
+    },
+    "地下半地下": {
+      "一级": {"no_sprinkler": 500, "with_sprinkler": 1000},
+      "citation": "GB 50016-2014 表5.3.1"
+    }
+  },
+  "industrial_workshop": {
+    "甲类": {
+      "单层_一级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "单层_二级": {"no_sprinkler": 3000, "with_sprinkler": 6000},
+      "多层_一级": {"no_sprinkler": 3000, "with_sprinkler": 6000},
+      "多层_二级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "citation": "GB 50016-2014 表3.3.1"
+    },
+    "乙类": {
+      "单层_一级": {"no_sprinkler": 5000, "with_sprinkler": 10000},
+      "单层_二级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "多层_一级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "多层_二级": {"no_sprinkler": 3000, "with_sprinkler": 6000},
+      "高层_一级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "高层_二级": {"no_sprinkler": 1500, "with_sprinkler": 3000},
+      "citation": "GB 50016-2014 表3.3.1"
+    },
+    "丙类": {
+      "单层_一级": {"no_sprinkler": 6000, "with_sprinkler": 12000},
+      "单层_二级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "单层_三级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "多层_一级": {"no_sprinkler": 6000, "with_sprinkler": 12000},
+      "多层_二级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "多层_三级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "高层_一级": {"no_sprinkler": 3000, "with_sprinkler": 6000},
+      "高层_二级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "citation": "GB 50016-2014 表3.3.1"
+    },
+    "丁类": {
+      "单层_一级": {"no_sprinkler": 8000, "with_sprinkler": 16000},
+      "单层_二级": {"no_sprinkler": 6000, "with_sprinkler": 12000},
+      "单层_三级": {"no_sprinkler": 3000, "with_sprinkler": 6000},
+      "单层_四级": {"no_sprinkler": 1000, "with_sprinkler": 2000},
+      "多层_一级": {"no_sprinkler": 8000, "with_sprinkler": 16000},
+      "多层_二级": {"no_sprinkler": 6000, "with_sprinkler": 12000},
+      "高层_一级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "高层_二级": {"no_sprinkler": 3000, "with_sprinkler": 6000},
+      "citation": "GB 50016-2014 表3.3.1"
+    },
+    "戊类": {
+      "单层_一级": {"no_sprinkler": 10000, "with_sprinkler": 20000},
+      "单层_二级": {"no_sprinkler": 8000, "with_sprinkler": 16000},
+      "单层_三级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "多层_一级": {"no_sprinkler": 10000, "with_sprinkler": 20000},
+      "多层_二级": {"no_sprinkler": 8000, "with_sprinkler": 16000},
+      "高层_一级": {"no_sprinkler": 5000, "with_sprinkler": 10000},
+      "高层_二级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "citation": "GB 50016-2014 表3.3.1"
+    }
+  },
+  "industrial_warehouse": {
+    "甲类": {
+      "单层_一级": {"no_sprinkler": 750, "with_sprinkler": 1500},
+      "单层_二级": {"no_sprinkler": 500, "with_sprinkler": 1000},
+      "citation": "GB 50016-2014 表3.3.2"
+    },
+    "乙类": {
+      "单层_一级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "单层_二级": {"no_sprinkler": 1500, "with_sprinkler": 3000},
+      "多层_一级": {"no_sprinkler": 1200, "with_sprinkler": 2400},
+      "多层_二级": {"no_sprinkler": 900, "with_sprinkler": 1800},
+      "高层_一二级": {"no_sprinkler": 1000, "with_sprinkler": 2000},
+      "citation": "GB 50016-2014 表3.3.2"
+    },
+    "丙类": {
+      "单层_一级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "单层_二级": {"no_sprinkler": 3000, "with_sprinkler": 6000},
+      "单层_三级": {"no_sprinkler": 1500, "with_sprinkler": 3000},
+      "多层_一级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "多层_二级": {"no_sprinkler": 3000, "with_sprinkler": 6000},
+      "多层_三级": {"no_sprinkler": 1200, "with_sprinkler": 2400},
+      "高层_一级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "高层_二级": {"no_sprinkler": 1500, "with_sprinkler": 3000},
+      "高架_一二级": {"no_sprinkler": 1500, "with_sprinkler": 3000},
+      "citation": "GB 50016-2014 表3.3.2"
+    },
+    "丁戊类": {
+      "单层_一级": {"no_sprinkler": 6000, "with_sprinkler": 12000},
+      "单层_二级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "单层_三级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "多层_一级": {"no_sprinkler": 6000, "with_sprinkler": 12000},
+      "多层_二级": {"no_sprinkler": 4000, "with_sprinkler": 8000},
+      "高层_一级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "高层_二级": {"no_sprinkler": 1500, "with_sprinkler": 3000},
+      "citation": "GB 50016-2014 表3.3.2"
+    }
+  },
+  "garage": {
+    "地下汽车库": {
+      "一二级": {"no_sprinkler": 2000, "with_sprinkler": 4000},
+      "citation": "GB 50067-2014 表5.1.1"
+    },
+    "单层汽车库": {
+      "一二级": {"no_sprinkler": 3000, "with_sprinkler": 6000},
+      "citation": "GB 50067-2014 表5.1.1"
+    }
+  }
+}

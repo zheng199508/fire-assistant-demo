@@ -1,0 +1,117 @@
+{
+  "scope": "sprinkler",
+  "description": "自动喷水灭火规则",
+  "rules": [
+    {
+      "id": "SP-0089",
+      "scope": "sprinkler",
+      "condition": "一类高层公建及其地下/半地下室（除游泳池/溜冰场）",
+      "conclusion": "应设置自动灭火系统（宜自喷）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.3-1条",
+      "priority": 90,
+      "tags": [
+        "一类高层公建",
+        "地下室"
+      ]
+    },
+    {
+      "id": "SP-0090",
+      "scope": "sprinkler",
+      "condition": "住宅H>100m",
+      "conclusion": "应设置自动喷水灭火系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.3-4条",
+      "priority": 90,
+      "tags": []
+    },
+    {
+      "id": "SP-0091",
+      "scope": "sprinkler",
+      "condition": "停车数>10辆地下/半地下汽车库",
+      "conclusion": "应设置自动喷水灭火系统",
+      "conclusion_type": "required",
+      "citation": "GB 50067-2014 第7.2.1-2条",
+      "priority": 90,
+      "tags": [
+        "地下室"
+      ]
+    },
+    {
+      "id": "SP-0092",
+      "scope": "sprinkler",
+      "condition": "环境温度4℃~70℃ && 非全地下车库 && 非甲、乙类工业建筑",
+      "conclusion": "地上部分应采用湿式系统",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第4.0.2-1条",
+      "priority": 80,
+      "tags": [],
+      "design_params": {
+        "适用环境": "环境温度 4℃~70℃ 的室内场所",
+        "喷头类型": "闭式洒水喷头（68℃标准响应）",
+        "报警阀组": "每组控制喷头数 ≤ 800个"
+      }
+    },
+    {
+      "id": "SP-0093a",
+      "scope": "sprinkler",
+      "condition": "歌舞娱乐放映游艺场所（地下/半地下或地上四层及以上）",
+      "conclusion": "应设置自动喷水灭火系统",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.4条",
+      "priority": 90,
+      "tags": [
+        "歌舞娱乐"
+      ]
+    },
+    {
+      "id": "SP-0093",
+      "scope": "sprinkler",
+      "condition": "环境温度<4℃或>70℃ || 全地下车库",
+      "conclusion": "地下车库或低温区域应采用干式系统或预作用系统",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第4.0.2-2条",
+      "priority": 80,
+      "tags": [],
+      "design_params": {
+        "适用环境": "环境温度 <4℃ 或 >70℃ 的场所（如地下车库、冷冻仓库）",
+        "系统类型": "干式系统或预作用系统",
+        "充水时间": "干式系统配水管充水时间 ≤ 1min"
+      }
+    },
+    {
+      "id": "SP-0094",
+      "scope": "sprinkler",
+      "condition": "自动喷水（灭火）",
+      "conclusion": "持续喷水时间>=1.0h",
+      "conclusion_type": "required",
+      "citation": "GB 55036-2022 第4.0.4-1条",
+      "priority": 80,
+      "tags": []
+    },
+    {
+      "id": "SP-0095",
+      "scope": "sprinkler",
+      "condition": "老年人照料设施",
+      "conclusion": "应设置自动灭火系统（宜自喷）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.4-5条",
+      "priority": 85,
+      "tags": [
+        "老年人"
+      ]
+    },
+    {
+      "id": "SP-0095-a",
+      "scope": "sprinkler",
+      "condition": "大/中型幼儿园",
+      "conclusion": "应设置自动灭火系统（宜自喷）",
+      "conclusion_type": "required",
+      "citation": "GB 50016-2014 第8.3.4-5条",
+      "priority": 85,
+      "tags": [
+        "教育"
+      ]
+    }
+  ]
+}
